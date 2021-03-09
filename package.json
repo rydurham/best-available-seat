@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "scripts": {
+        "local": "NODE_ENV=development postcss resources/css/app.css --output public/css/app.css",
+        "build": "NODE_ENV=production postcss resources/css/app.css --output public/css/app.css"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.2.5",
+        "postcss": "^8.2.7",
+        "postcss-cli": "^8.3.1",
+        "tailwindcss": "^2.0.3"
+    }
+}
