@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="css/app.css">
     @livewireStyles
 </head>
-<body>
-  <div class="min-h-screen bg-gray-200">
-    <h1 class="text-center text-xl text-cyan-700 md:text-4xl pt-4">Best Available Seat</h1>
-    <div class="absolute top-16 bottom-16 left-8 right-8 md:inset-32 bg-white rounded">
-      <div class="bg-white rounded-t">
+<body class="bg-cyan-200">
+  <div class="rounded">
+    <h1 class="text-center text-xl text-cyan-700 md:text-4xl pt-8">Best Available Seat</h1>
+    <div class="mx-8 md:mx-32 mt-8 bg-white rounded">
+      <div class="bg-white rounded">
         <nav class="flex flex-col bg-cyan-100 sm:flex-row rounded-t">
-          <a
-            href="{{ route('find-a-seat') }}"
-            class="py-4 px-6 block hover:text-cyan-500 focus:outline-none {{ request()->is('seats') ? 'text-cyan-600 border-b-2 font-medium border-cyan-500' : 'text-cyan-500' }}">
-            Find A Seat
-          </a>
-          <a
-            href="{{ route('generate-venue') }}"
-            class="py-4 px-6 block hover:text-cyan-500 focus:outline-none {{ request()->is('venue') ? 'text-cyan-600 border-b-2 font-medium border-cyan-500' : 'text-cyan-500' }}">
-            Generate A Venue
-          </a>
           <a
             href="{{ route('docs') }}"
             class="py-4 px-6 block hover:text-cyan-500 focus:outline-none {{ request()->is('docs') ? 'text-cyan-600 border-b-2 font-medium border-cyan-500' : 'text-cyan-500' }}">
             API Documentation
+          </a>
+          <a
+            href="{{ route('find-a-seat') }}"
+            class="py-4 px-6 block hover:text-cyan-500 focus:outline-none {{ request()->is('seats') ? 'text-cyan-600 border-b-2 font-medium border-cyan-500' : 'text-cyan-500' }}">
+            Find Available Seats
+          </a>
+          <a
+            href="{{ route('generate-venue') }}"
+            class="py-4 px-6 block hover:text-cyan-500 focus:outline-none {{ request()->is('venue') ? 'text-cyan-600 border-b-2 font-medium border-cyan-500' : 'text-cyan-500' }}">
+            Generate Venue
           </a>
         </nav>
         <div class="p-8 text-gray-700">
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <p class="absolute bottom-2 md:bottom-10 text-center w-full text-cyan-700">Ryan C. Durham - March 2021</p>
+    <p class="text-cyan-700 text-center m-4 md:m-8">Ryan C. Durham - March 2021</p>
   </div>
   @livewireScripts
 </body>

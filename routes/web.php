@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Livewire\FindASeat;
+use App\Http\Livewire\FindSeats;
 use App\Http\Livewire\GenerateVenue;
 use Illuminate\Support\Facades\Route;
 
@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('find-a-seat');
+    return redirect()->route('docs');
 });
 
-Route::get('/seats', FindASeat::class)->name('find-a-seat');
+Route::get('/seats', FindSeats::class)->name('find-a-seat');
 
 Route::get('/venue', GenerateVenue::class)->name('generate-venue');
 
