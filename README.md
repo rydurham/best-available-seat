@@ -127,8 +127,8 @@ To run the test suite, use `docker-compose run --rm php vendor/bin/phpunit`
 
 ## Implementation Notes
 
-- When instantiating a new `Venue` it will create a set of available seats based on the row and column count.
-- You can optionally provide the venue with a set of seat definitions (such as those retrieved from the JSON payload) and those seat definitions will **replace** the default seat definitions, not combine with them.
-- The core functionality for finding the best available seats is defined in the `findBestSeatGroup` method on the `Venue` class.
+- This application is built in PHP using the Laravel PHP framework.  The web views are built on top of Laravel Livewire.
+- The seat definitions in the JSON payload will represent **all** of the seats in the venue; any seat not listed in the `seats` object will not be available for analysis.
+- The core functionality for finding the best available seats is defined in the `app/Actions/FindBestAvailableSeats.php` class.
 - For the sake of this exercise I have assumed that groups of patrons will not be split across rows; if there are more patrons than there are seat columns available then the group will not be seated.
-- Additionally I have assumed that no venue will have more than 702 rows of seats. ('a' through 'zz'.)
+- I have also assumed that no venue will have more than 702 rows of seats. ('a' through 'zz'.)
