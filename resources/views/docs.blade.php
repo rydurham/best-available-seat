@@ -42,8 +42,7 @@
 }</code></pre>
 
 <p class="mb-4">
-  You can substitute your own '<code>requested_seat_count</code>', '<code>venue</code>' or <code>seats</code> as necessary. Each `seat`
-  must have a '<code>status</code>' of either "BOOKED" or "AVAILABLE".
+  You can substitute your own '<code>requested_seat_count</code>', '<code>venue</code>' or '<code>seats</code>' as necessary. Each '<code>seat</code>' must have a '<code>status</code>' of either "BOOKED" or "AVAILABLE".
 </p>
 
 <p class="mb-4">A successful response will look like this:</p>
