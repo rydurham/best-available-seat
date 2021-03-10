@@ -2,6 +2,8 @@
 
 This repository my solution to the 'Best Available Seat' code challenge.  A solution can be retrieved via API or the web.  See below for information about local development and running tests.
 
+This application has been deployed to Heroku:  https://best-available-seat.herokuapp.com/
+
 ## API Documentation
 
 ### POST `/api/seats`  - Find the best available seats in a venue.
