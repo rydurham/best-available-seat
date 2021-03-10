@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\FindSeatsAPI;
+use App\Http\Controllers\Api\GenerateVenueAPI;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('venue/{rows?}/{columns?}', GenerateVenueAPI::class);
+Route::post('seats', FindSeatsAPI::class);
