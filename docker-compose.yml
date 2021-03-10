@@ -1,0 +1,19 @@
+
+version: '3'
+
+services:
+
+  php:
+    build:
+      context: docker/php
+    command: ["php", "artisan", "serve", "--host=0.0.0.0"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/var/www:cached
+
+  node:
+    build:
+      context: docker/node
+    volumes:
+      - ./:/var/www:cached
